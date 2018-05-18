@@ -2,7 +2,7 @@
   <div>
     <div class='recommend-title'>热销推荐</div>
     <ul>
-      <li class='item border-bottom' v-for='item of recommendList' :key='item.id'>
+      <li class='item border-bottom' v-for='item of list' :key='item.id'>
         <img :src="item.imgUrl" class="item-img">
         <div class='item-info'>
           <p class='item-title'>{{item.title}}</p>
@@ -17,29 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/f4/f455d92ba582f608.water.jpg_200x200_375e5775.jpg',
-          title: '南京汤山颐尚温泉',
-          desc: '温泉疗养、度假休闲的好去处'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/201312/03/38da27f8a2ad319ec8d65eac.jpg_200x200_72a1d26d.jpg',
-          title: '红山森林动物园',
-          desc: '惊险有趣的大型斗兽表演'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201305/22/273c38aa938ad97dc8d65eac.jpg_200x200_1f49d1ec.jpg',
-          title: '中山陵',
-          desc: '这里特别受欢迎哟(๑‾ ꇴ ‾๑)'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
