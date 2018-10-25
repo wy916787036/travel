@@ -1,5 +1,6 @@
 FROM node:8.12
-RUN apt-get update \    && apt-get install -y nginx
+# RUN apt-get update \    && apt-get install -y nginx
+FROM nginx:1.15.5
 WORKDIR /app
 COPY . /app/
 EXPOSE 80
